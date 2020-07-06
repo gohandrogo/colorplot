@@ -1,12 +1,18 @@
+@font-face {
+    font-family: 'Kabel-Heavy';
+    /* src: url('../../fonts/Kabel-Heavy.eot'); IE9 Compat Modes */
+    /* src: url('../../fonts/Kabel-Heavy.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
+         src:local('../../fonts/Kabel-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
+         local('../../fonts/Kabel-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
+         /* url('../../fonts/Kabel-Heavy.svg#svgFontName') format('svg'); Legacy iOS */
+}
+
 header{
-    background:red;
+    background:#26a65b;
     text-align:right;
     color:white;
     padding:15px;
     z-index:9999;
-}
-*{
-    font-family:courier;
 }
 h1{
     font-size:32px;
@@ -14,23 +20,25 @@ h1{
 h2{
     font-size:24px;
 }
- .detail > .sub-detail{
-     font-size:12px;
- }
- .detail>.detail {
-     color:skyblue;
-     font-size:32px;
- }
- .detail>.label, .img-detail>.label{
-     font-weight: bold;
-     font-size:24px;
- }
- .img-detail>.swatch{
-     display:inline-block;
-     text-align:right;
-     width:100%;
-     background:grey;
- }
+.detail > .sub-detail{
+    font-size:12px;
+}
+.detail>.detail {
+    color:skyblue;
+    font-size:32px;
+}
+.detail>.label, .img-detail>.label{
+    font-weight: bold;
+    font-size:24px;
+}
+.img-detail>.swatch{
+    display:inline-block;
+    text-align:right;
+    width:100%;
+    border:1px solid #AAA;
+    /* max-height:250px; */
+    max-width:350px;
+}
 
 .img-detail>.label,
 .detail>.label,
@@ -38,22 +46,44 @@ h2{
 detail>.sub-detail{
     display:block;
 }
- .detail.component,
- .img-detail.component{
-     text-align:right;
-     padding:0 15px;
- }
+.detail.component,
+.img-detail.component{
+    text-align:right;
+    padding:0 15px;
+}
 
- .flex-container, .img-detail.component{
-     display:flex;
-     flex-direction:column;
- }
- .flex-container> .text-detail, .swatch{
-     flex-grow:1;
- }
- .flex-container > .img-detail{
-     flex-grow:2;
- }
- .flex-container{
-     height:93%;
- }
+.flex-container, .img-detail.component{
+    display:flex;
+    flex-direction:column;
+}
+.card-header{
+    color: #fff;
+    flex-grow:1;
+    background-color:midnightblue;
+    margin:15px;
+    font-size:8px;
+    text-align:center;
+    padding:2px;
+    text-transform:uppercase;
+    font-family: "Kabel Heavy", sans-serif;
+    letter-spacing:2px;
+    font-weight:bold;
+    font-variant: small-caps;
+}
+.card-content{
+    flex-grow:1;
+    font-size:8px;
+    text-align:center;
+    padding:0px;
+    text-transform:uppercase;
+    font-family: "Kabel Heavy", sans-serif;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+.flex-container > .img-detail{
+    flex-grow:2;
+}
+.flex-container{
+    height:93%;
+}

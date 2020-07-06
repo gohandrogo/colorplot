@@ -19,10 +19,24 @@ module.exports = {
                 }
             },
             {
+                test: /\.(png|jpe?g|gif)$/i,
+                use: [
+                    {
+                    loader: 'file-loader',
+                    },
+                ],
+                },
+            {
                 test:/\.html$/,
                 use:{
                     loader:"html-loader"
                 }
+            },
+            {
+                test: /\.(woff|woff2)$/,
+                use: {
+                    loader: 'url-loader',
+                },
             },
             {
                 test: /\.css$/,
