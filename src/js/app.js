@@ -3,9 +3,8 @@ import React, {Component} from "react"
 import ReactDom from "react-dom"
 import Dock from 'react-dock';
 import '../css/main.css';
-import TextDetail from "./components/presentational/TextDetail.js"
 import logo from '../../images/logo.png';
-
+import PropertyCard from "./components/presentational/property-card"
 
 class App extends Component{
     constructor(){
@@ -51,24 +50,7 @@ class App extends Component{
                         <span className="label">You have landed on: </span>
                         {/*<img src="http://via.placeholder.com/300x300" alt=""/>*/}
                         <div className="swatch">
-                            <section className="card-header">
-                                <p>Title Deed</p>
-                                <p>{cardDetails.name}</p>
-
-                            </section>
-                            <section className="card-content">
-                                <p>Rent $ {cardDetails.rent}</p>
-                                <p>with 1 House $ {cardDetails.houseRentModifier[0]}</p>
-                                <p>with 2 House $ {cardDetails.houseRentModifier[1]}</p>
-                                <p>with 3 House $ {cardDetails.houseRentModifier[2]}</p>
-                                <p>with 4 House $ {cardDetails.houseRentModifier[3]}</p>
-                                <p>With {cardDetails.hotelPricingModifier[0]} $ 250 Mortgatge Value of ${cardDetails.MortgatgeValue}</p>
-                                <p>Houses cost ${cardDetails.housePrice} each</p>
-                                <p>Hotels cost $ {cardDetails.hotelcost} each plus four houses</p>
-                                <p className="fine-print">
-                                    if a player ownas ALL the Lots of any Color-Group, the rent is Doubled on Unimproved Lots in that group.
-                                </p>
-                            </section>
+                            <PropertyCard property={this.state.cardDetails}/>
                         </div>
                     </div>
                 </div>
