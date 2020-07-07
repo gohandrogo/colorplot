@@ -1,10 +1,7 @@
 @font-face {
     font-family: 'Kabel-Heavy';
-    /* src: url('../../fonts/Kabel-Heavy.eot'); IE9 Compat Modes */
-    /* src: url('../../fonts/Kabel-Heavy.eot?#iefix') format('embedded-opentype'), IE6-IE8 */
-         src:local('../../fonts/Kabel-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
-         local('../../fonts/Kabel-Heavy.ttf')  format('truetype'), /* Safari, Android, iOS */
-         /* url('../../fonts/Kabel-Heavy.svg#svgFontName') format('svg'); Legacy iOS */
+         src:local('./fonts/Kabel-Heavy.woff') format('woff'), /* Pretty Modern Browsers */
+         local('./fonts/Kabel-Heavy.ttf')  format('truetype'), /* Safari, Android, */
 }
 
 header{

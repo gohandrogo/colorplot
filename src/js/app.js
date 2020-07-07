@@ -3,7 +3,6 @@ import React, {Component} from "react"
 import ReactDom from "react-dom"
 import Dock from 'react-dock';
 import '../css/main.css';
-import TextDetail from "./components/presentational/TextDetail.js"
 import logo from '../../images/logo.png';
 
 
@@ -31,16 +30,13 @@ class App extends Component{
         return(
 
             <div>
-                <header>
-                    <div>
+                   <div>
                         <h1>Monopoly</h1>
                         <img height={100} width={100} src={logo}/>
                         <h2>written by Alejandro</h2>
                     </div>
-                </header>
                 {/* //content window */}
                 <section className="content">
-                <Dock dimMode="none" position='left' isVisible={this.state.isLeftVisible}>
                     {/* you can pass a function as a child here */}
                     {/* todo: break out into close icon component */}
                     
@@ -66,13 +62,13 @@ class App extends Component{
                                 <p>Houses cost ${cardDetails.housePrice} each</p>
                                 <p>Hotels cost $ {cardDetails.hotelcost} each plus four houses</p>
                                 <p className="fine-print">
-                                    if a player ownas ALL the Lots of any Color-Group, the rent is Doubled on Unimproved Lots in that group.
+                                    if a player owns ALL the Lots of any Color-Group, the rent is Doubled on Unimproved Lots in that group.
                                 </p>
                             </section>
                         </div>
                     </div>
                 </div>
-                </Dock>
+                
                 </section>
             
             </div>
