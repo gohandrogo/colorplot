@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open --host 0.0.0.0 --port 8080",
-    "build": "webpack",
-    "docker:build": "docker build -t gohandrogo/monopoly-ui ."
+    "webpack": "webpack",
+    "down": "docker ps -q | $v | docker kill $v",
+    "build": "docker build  -t gohandrogo/monopoly-ui . | ccze -m ansi",
+    "run": "docker run -p 3000:3000 -d gohandrogo/monopoly-ui",
+    "logs":"docker logs -f brave_yonath  2>&1 | ccze -m ansi"
   },
   "keywords": [],
   "author": "",
